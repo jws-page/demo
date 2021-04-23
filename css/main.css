@@ -44,7 +44,7 @@
     z-index: 2;  
     top: 300px;  
     color: #fff;
-    background:#474550 ;  
+    background:#7b8584 ;  
 }  
 .arrow:hover {  
     background-color: #b3a485;  
@@ -56,23 +56,10 @@
     right: 20px;  
 }  
   
-
-#gotop {
-    position:fixed;
-    z-index:90;
-    right:30px;
-    bottom:31px;
-    display:none;
-    width:50px;
-    height:50px;
-    color:#fff;
-    background:#33b5e5;
-    line-height:50px;
-    border-radius:50%;
-    transition:all 0.5s;
-    text-align: center;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-}
-#gotop :hover{
-    background:#0099CC;
+#top {
+  display: none;
+  position: fixed;
+  bottom: 40px; 
+  right: 40px;
+  border: none;
 }
