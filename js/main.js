@@ -60,8 +60,8 @@
 
     var timer = duration, hours, minutes, seconds;
     setInterval(function () {
-        hours = parseInt((timer /3600)%24, 10)
-        minutes = parseInt((timer / 60)%60, 10)
+        hours = parseInt((timer /3600) % 24, 10)
+        minutes = parseInt((timer / 60) % 60, 10)
         seconds = parseInt(timer % 60, 10);
 
         hours = hours < 10 ? "0" + hours : hours;
@@ -72,17 +72,6 @@
         --timer;
     }, 1000);
 }
-
-window.onscroll = scrollFunction;
-
-function scrollFunction() { 
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    document.getElementById("top").style.display = "block";
-  } else {
-    document.getElementById("top").style.display = "none";
-  }
-}
-
 
 function goTop() {
   document.documentElement.scrollTop = 0;
