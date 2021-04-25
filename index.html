@@ -1,16 +1,20 @@
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
-    <title>demno</title>
+    <title>Demo</title>
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     
 </head>  
-<body bgcolor="#f4f4f4">
-    <div style=" margin:20px auto;    width: 1200px;    height: 30px;">
-        <div>倒數： <span id="countdownimer">24:00:00</span></div>
+<body bgcolor="#ebedec">
+    <!-- search -->
+     <div class="container-search">
+        <span class="icon"><img id="icon-img" src="img/search.png"></span>
+        <input type="search" id="search" placeholder="Search"/>
+        <style id="m-search"></style>
     </div>
+    
+    <!-- slider -->
     <div id="container">
-        <!-- slider -->
         <div id="list" style="left:0px">
             <img src="img/1.jpg" alt="1"/>
             <img src="img/2.jpg" alt="2"/>
@@ -35,15 +39,92 @@
             <span index="9"></span> 
             <span index="10"></span>                 
         </div>  
-        <a href="javascript:;" class="arrow" id="prev"><</a>  
+        <a href="javascript:;" class="arrow" id="pre"><</a>  
         <a href="javascript:;" class="arrow" id="next">></a>
-        <!-- slider end -->
     </div>
 
-    <!-- test area -->
-    <div style=" margin:20px auto;    width: 1200px;    height: 1000px;"> </div>
-    <button onclick="goTop()" id="top"><img src="img/top.png"></button>
+    <!-- timer -->
+    <div id="container-timer">
+        <div>倒數： <span id="countdownimer">24:00:00</span></div>
+    </div>
 
+    <!-- dialog -->
+    <div id="dialog" class="dialog">
+        <div class="dialog-content" id="dialog-content">
+            <span class="close" id="close">&times;</span>
+            <img id="dialog-img" src="img/product/p002-0001.jpg"/>
+            <h1 id="dialog-desc">13</h1>
+        </div>
+    </div>  
+
+    <!-- list -->
+    <div class="content" id="content">
+        <div class="content" id="left-side">
+            <div class="vertical-menu">
+                <a href="#" class="active">商品分類</a>
+                <a id="p001" href="#" onclick="select('p001')">刺身</a>
+                <a id="p002" href="#" onclick="select('p002')">壽司</a>
+                <a id="p003" href="#" onclick="select('p003')">小缽</a>
+                <a id="p004" href="#" onclick="select('p004')">燒物</a>
+                <a id="p005" href="#" onclick="select('p005')">揚物</a>
+                <style id="m-select"></style>
+            </div>
+        </div>
+        <div class="content" id="right-side">
+            <div>
+                <li class="wrap" data-type="p002" data-name="炙燒鮭魚握壽司" onclick ="popup('p002-0001','炙燒鮭魚握壽司');">
+                    <img src="img/product/p002-0001.jpg">
+                    <h1>炙燒鮭魚握壽司</h1>
+                </li>
+                 <li class="wrap" data-type="p002" data-name="比目魚握壽司" onclick ="popup('p002-0002','比目魚握壽司');">
+                    <img src="img/product/p002-0002.jpg">
+                    <h1>比目魚握壽司</h1>
+                </li>
+                 <li class="wrap" data-type="p002" data-name="蟹膏軍艦" onclick ="popup('p002-0003','蟹膏軍艦');">
+                    <img src="img/product/p002-0003.jpg">
+                    <h1>蟹膏軍艦</h1>
+                </li>
+                 <li class="wrap" data-type="p002" data-name="鮪魚壽司" onclick ="popup('p002-0004','鮪魚壽司');">
+                    <img src="img/product/p002-0004.jpg">
+                    <h1>鮪魚壽司</h1>
+                </li>
+                 <li class="wrap" data-type="p002" data-name="紅甘握壽司" onclick ="popup('p002-0005','紅甘握壽司');">
+                    <img src="img/product/p002-0005.jpg">
+                    <h1>紅甘握壽司</h1>
+                </li>
+                <li class="wrap" data-type="p003" data-name="明蝦沙拉" onclick ="popup('p003-0001','明蝦沙拉');">
+                    <img src="img/product/p003-0001.jpg">
+                    <h1>明蝦沙拉</h1>
+                </li>
+                 <li class="wrap" data-type="p003" data-name="和風秋葵" onclick ="popup('p003-0002','和風秋葵');">
+                    <img src="img/product/p003-0002.jpg">
+                    <h1>和風秋葵</h1>
+                </li>
+                 <li class="wrap" data-type="p003" data-name="涼拌牛蒡絲" onclick ="popup('p003-0003','涼拌牛蒡絲');">
+                    <img src="img/product/p003-0003.jpg">
+                    <h1>涼拌牛蒡絲</h1>
+                </li>
+                <li class="wrap" data-type="p004" data-name="烤雞肉串" onclick ="popup('p004-0001','烤雞肉串');">
+                    <img src="img/product/p004-0001.jpg">
+                    <h1>烤雞肉串</h1>
+                </li>
+                <li class="wrap" data-type="p004" data-name="烤牛肉串" onclick ="popup('p004-0002','烤牛肉串');">
+                    <img src="img/product/p004-0002.jpg">
+                    <h1>烤牛肉串</h1>
+                </li>
+                <li class="wrap" data-type="p004" data-name="烤羊肉串" onclick ="popup('p004-0003','烤羊肉串');">
+                    <img src="img/product/p004-0003.jpg">
+                    <h1>烤羊肉串</h1>
+                </li>
+                <li class="wrap" data-type="p004" data-name="烤豬肉串" onclick ="popup('p004-0004','烤豬肉串');">
+                    <img src="img/product/p004-0004.jpg">
+                    <h1>烤豬肉串</h1>
+                </li>
+            </div>
+        </div>
+    </div>
+    <button onclick="goTop()" id="top"><img src="img/top.png"></button>
+    
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>  
